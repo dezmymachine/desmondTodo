@@ -1,3 +1,4 @@
+import styles from "./TodoItem.module.css";
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
   return (
     <li>

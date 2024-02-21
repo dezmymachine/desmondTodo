@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NewTodoForm } from "./NewTodoForm";
 import "./style.css";
+
 import { TodoList } from "./TodoList";
 
 export default function App() {
@@ -43,10 +44,11 @@ export default function App() {
   }
 
   return (
-    <>
+    <div className="background">
+      <h1 className="header">TODO</h1>
       <NewTodoForm onSubmit={addTodo} />
-      <h1 className="header">Todo List</h1>
+
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-    </>
+    </div>
   );
 }
